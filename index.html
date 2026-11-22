@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>我的站点</title>
+<style>
+  body{margin:0;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh;display:flex;align-items:center;justify-content:center}
+  .card{max-width:520px;margin:16px;padding:32px;background:#1e293b;border-radius:14px;box-shadow:0 10px 30px #0006}
+  h1{margin:0 0 8px;font-size:28px}
+  p{color:#94a3b8;line-height:1.7}
+  .ok{display:inline-block;padding:4px 10px;border-radius:99px;background:#16a34a33;color:#4ade80;font-size:13px}
+  #t{font-family:monospace;color:#38bdf8}
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="ok">● 部署成功</span>
+  <h1>Hello, Cloudflare 👋</h1>
+  <p>这个页面来自 GitHub 仓库 <b>halcay/my-repo</b>，由 Cloudflare 自动部署。<br>
+  往仓库上传新文件，约一分钟后自动更新。</p>
+  <p>当前时间：<span id="t"></span></p>
+  <p>测试其他页面：<a href="/about.html" style="color:#38bdf8">关于页</a> ·
+  <a href="/docs/" style="color:#38bdf8">文档页（子目录）</a></p>
+</div>
+<script>
+  const t = document.getElementById('t');
+  setInterval(() => t.textContent = new Date().toLocaleString('zh-CN'), 1000);
+</script>
+</body>
+</html>
